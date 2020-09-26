@@ -28,9 +28,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -92,9 +95,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           }
         },
         "lint": {
@@ -123,6 +129,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "reservation"
+    }
+  },
+  "defaultProject": "reservation",
+  "cli": {
+    "analytics": "c7d9ee8c-fcf8-4354-970b-5c52c54687e5"
+  }
 }
