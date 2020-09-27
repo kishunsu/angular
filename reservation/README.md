@@ -1,5 +1,7 @@
 # Reservation
 
+udemyのjavascriptによるWebアプリケーション構築演習
+バックエンドはnodejsだが、時間があればTypescript版にリファクタリングしてみる(ORMとしてSequelizeを用い、MySQLを用いる形も検討)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
 
 ## Development server
