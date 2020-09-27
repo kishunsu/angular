@@ -4,17 +4,13 @@
     </div>
     <br>
     <div class="row">
-        <div *ngFor="let item of products" class="col-sm">
-            <a [routerLink]="['/detail']">
+        <div *ngFor="let item of products; let productId = index" class="col-sm">
+            <a [routerLink]="[productId]">
                 <div class="card">
-
-                    <img src="./assets/img/placeholder-image.png" class="card-img-top" alt="...">
+                    <img src="{{item.coverImage}}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of
-                            the
-                            card's
-                            content.</p>
+                        <h3 class ="card-title">{{item.name}}</h3>
+                        <p class="card-text">{{item.description}}</p>
                     </div>
 
                 </div>
