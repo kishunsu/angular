@@ -89,6 +89,14 @@ class FakeDb {
             }
         ]
     }
+
+    async initDb(){
+        await this.cleanDb();
+        this.pushProductsDb();
+    }
+    async cleanDb(){
+        await Product.deleteMany({})
+    }
     pushProductsDb(){
         this.products.forEach((product)=>{
             const newProduct = new Product(product)
