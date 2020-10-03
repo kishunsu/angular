@@ -3,11 +3,14 @@ const mongoose = require('mongoose');
 const config = require('./config/dev')
 const FakeDb = require('./fake-db');
 
-const app = express();
+const productRoutes = require('./routes/product');
 
-app.get('/products', function (req, res) {
-    res.json({ 'success': true })
-});
+const app = express();
+app.use('/app/v1/products',productRoutes);
+
+// app.get('/products', function (req, res) {
+//     res.json({ 'success': true })
+// });
 
 
 const PORT = process.env.PORT || '3001'
@@ -23,6 +26,7 @@ mongoose.connect(config.DB_URI, {
 }).then(
     ()=>{
         const fakeDb = new FakeDb();
-        fakeDb.seeDb();
+        fakeDb.initDb();
+        // fakeDb.seeDb();
     }
 );
