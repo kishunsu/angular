@@ -4,9 +4,15 @@ const config = require('./config/dev')
 const FakeDb = require('./fake-db');
 
 const productRoutes = require('./routes/product');
-
+const path = require('path');
 const app = express();
 app.use('/api/v1/products',productRoutes);
+
+const appPath = path.join(__dirname,'..','dist','reservation');
+app.use(express.static(appPath));
+app.get("*",function(req,res){
+    res.sendFile(path.resolve(appPath,'index.html'))
+} )
 
 // app.get('/products', function (req, res) {
 //     res.json({ 'success': true })
