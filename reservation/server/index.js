@@ -1,12 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const config = require('./config/dev')
+const config = require('./config/dev');
+const bodyParser = require('body-parser');
 const FakeDb = require('./fake-db');
 
 const productRoutes = require('./routes/product');
+const userRoutes = require('./routes/users');
 const path = require('path');
 const app = express();
+app.use(bodyParser.json());
+
 app.use('/api/v1/products',productRoutes);
+app.use('/api/v1/users',userRoutes);
 
 const appPath = path.join(__dirname,'..','dist','reservation');
 app.use(express.static(appPath));
