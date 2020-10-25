@@ -8,6 +8,8 @@ import { NavbarComponent } from './common/navbar/navbar.component';
 // import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 // import { ProductComponent } from './product/product.component';
 import {HttpClientModule} from '@angular/common/http';
+// import { LoginComponent } from './auth/login/login.component';
+// import { AuthComponent } from './auth/auth.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,7 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
